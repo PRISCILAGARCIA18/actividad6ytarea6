@@ -1,0 +1,36 @@
+# 1. Generar una clave de aplicación
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+
+# 2. Levantar un servidor local de desarrollo
+node server.js
+npx nodemon server.js  # Si usas nodemon
+
+# 3. Crear un enlace simbólico para la carpeta Storage
+ln -s /ruta/del/origen /ruta/del/destino
+
+# 4. Crear un modelo llamado "Product" (usando Sequelize)
+npx sequelize-cli model:generate --name Product --attributes name:string,price:integer
+
+# 5. Crear un controlador para el modelo "Product"
+touch controllers/ProductController.js
+
+# Crear un controlador de recursos
+touch routes/products.js
+
+# 6. Crear una migración para el modelo "Product"
+npx sequelize-cli migration:generate --name create-products-table
+
+# 7. Crear un Seeder para el modelo "Product"
+npx sequelize-cli seed:generate --name ProductSeeder
+
+# 8. Crear una Factory para el modelo "Product"
+touch factories/ProductFactory.js
+
+# 9. Listar rutas en Express
+node -e "require('./server').app._router.stack.forEach(route => route.route && console.log(route.route.path))"
+
+# 10. Ejecutar y deshacer migraciones en Sequelize
+npx sequelize-cli db:migrate          # Ejecutar migraciones
+npx sequelize-cli db:migrate:undo     # Deshacer la última migración
+npx sequelize-cli db:migrate:undo:all # Deshacer todas las migraciones
+npx sequelize-cli db:migrate:refresh  # Refrescar migraciones
