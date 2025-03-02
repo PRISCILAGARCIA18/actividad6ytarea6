@@ -1,13 +1,14 @@
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;400;600;800&display=swap");
 
 * {
   font-family: "Poppins", sans-serif;
+  font-style: italic;
   color: white;
 }
 
 body {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
   margin: 0;
   padding: 0;
 }
@@ -16,28 +17,29 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 100vh;
+  padding-right: 10%;
 }
 
 header {
-  width: 100%;
-  text-align: center;
+  width: 80%;
+  text-align: right;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 20, 147, 0.7);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .nombre {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: 2px;
 }
 
 .contenedormedio {
   width: 50%;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  text-align: right;
+  background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -53,7 +55,7 @@ input {
 }
 
 #plus {
-  background: #ff8c00;
+  background: #ff1493;
   border: none;
   padding: 10px 15px;
   font-size: 1.2rem;
@@ -63,7 +65,7 @@ input {
 }
 
 #plus:hover {
-  background: #e67600;
+  background: #ff0080;
 }
 
 #historial {
@@ -74,8 +76,8 @@ input {
 
 #listaReproduccion article {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: space-between;
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
   margin: 10px 0;
@@ -86,14 +88,14 @@ input {
   width: 50px;
   height: 50px;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 footer {
   width: 100%;
-  text-align: center;
+  text-align: right;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 20, 147, 0.7);
   position: fixed;
   bottom: 0;
 }
@@ -106,5 +108,5 @@ footer .redessociales a {
 }
 
 footer .redessociales a:hover {
-  color: #ff8c00;
+  color: #ff69b4;
 }
