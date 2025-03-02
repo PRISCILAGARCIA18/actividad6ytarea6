@@ -54,8 +54,8 @@ class GestorDeCanciones {
         this.canciones.forEach((cancion, index) => {
             listaReproduccion.innerHTML += `
                 <article>
-                    <img src="${cancion.imagen}" alt="Portada">
                     <b>${cancion.info()}</b>
+                    <img src="${cancion.imagen}" alt="Portada">
                     <i class="editBtn marginBtn fa-solid fa-pencil" data-index="${index}"></i> 
                     <i class="deleteBtn marginBtn fa-solid fa-trash" data-index="${index}"></i>
                 </article>`;
